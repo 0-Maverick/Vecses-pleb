@@ -5,12 +5,36 @@
 
 // Dynamically load a page to a Div.
 // Source: https://teamtreehouse.com/community/loading-external-html-into-a-div-using-jquery
-var includeDiv = $("#ann_loc");
-var includeFolder = 'announcements/';
-$(window).on('hashchange', function() {
-    var href = location.hash.slice(1) +".html";
-    includeDiv.load(includeFolder + href);
+
+function load_announcement(ann_page) {
+    // alert("load_announcement: " + ann_page);
+
+    includeDiv.load(ann_page);
 
     $("html, body").animate({
-        scrollTop: $(includeDiv).offset().top});
+        scrollTop: $(scrollDiv).offset().top});
+}
+
+var scrollDiv = $("#nav_curr");
+var includeDiv = $("#ann_loc");
+var includeFolder = 'announcements/';
+
+$(window).on('hashchange', function() {
+    var href = location.hash.slice(1) +".html";
+
+    // alert("Hashchange alert: " + href);
+
+    load_announcement(includeFolder + href);
+    // includeDiv.load(includeFolder + href);
+
+
+    // $("html, body").animate({
+    //     scrollTop: $(includeDiv).offset().top});
+});
+
+$(window).on('load', function() {
+    var href = location.hash.slice(1) +".html";
+    // alert("Load alert: " + href);
+
+    load_announcement(includeFolder + href);
 });

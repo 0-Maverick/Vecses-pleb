@@ -1179,7 +1179,7 @@ section {
     a {
       color: color($colors, dark);
       font-size: 14px;
-      text-transform: capitalize;
+      text-transform: none;
       text-overflow: ellipsis;
       overflow: hidden;
       white-space: nowrap;
@@ -1266,7 +1266,7 @@ article {
     padding-top: 0;
   }
   h2 {
-    text-transform: capitalize;
+    text-transform: none;
     font-size: 20px;
     margin: 0;
     line-height: 28px;
@@ -1644,7 +1644,7 @@ article {
     }
     h1 {
       margin-bottom: 5px;
-      text-transform: capitalize;
+      text-transform: none;
       line-height: 1.4em;
       font-size: 28px;
       font-weight: 700;
@@ -2236,7 +2236,7 @@ section .container {
   h1 {
     margin: 0;
     line-height: 22px;
-    text-transform: capitalize;
+    text-transform: none;
     font-weight: 700;
     font-size: 14px;
     a {
@@ -2256,6 +2256,47 @@ section .container {
 }
 
 .tags-list {
+  margin: 0;
+  padding: 0;
+  padding-left: 15px;
+  li {
+    padding: 5px;
+    a {
+      color: #000;
+      position: relative;
+      text-decoration: none;
+      transition: all .3s;
+      -moz-transition: all .3s;
+      -webkit-transition: all .3s;
+      -o-transition: all .3s;
+      &:hover {
+        opacity: .8;
+      }
+      &:before {
+        content: '#';
+      }
+      &:after {
+        position: absolute;
+        content: ' ';
+        left: 0;
+        bottom: -1px;
+        width: 0;
+        height: 1px;
+        background-color: color($colors, primary);
+        transition: all .3s;
+        -moz-transition: all .3s;
+        -webkit-transition: all .3s;
+        -o-transition: all .3s;
+      }
+      &:hover:after {
+        width: 100%;
+      }
+    }
+  }
+}
+
+/* Announcement list style (based on tag list), by 0-Maverick, 2018-Dec-30 */
+.ann-list {
   margin: 0;
   padding: 0;
   padding-left: 15px;
@@ -3157,7 +3198,7 @@ section.single {
         margin: 0;
         line-height: 1.1em;
         font-weight: 700;
-        text-transform: capitalize;
+        text-transform: none;
         margin-bottom: 10px;
       }
       .details {
@@ -3957,6 +3998,7 @@ blockquote {
           -webkit-transition: $general-transition;
           -o-transition: $general-transition;
           -moz-transition: $general-transition;
+          transition:  $general-transition;
         }
         .value {
           font-size: 18px;

@@ -149,7 +149,7 @@
 }
 .skin-purple .featured .details h1 {
   margin-bottom: 5px;
-  text-transform: capitalize;
+  text-transform: none;
   line-height: 1.4em;
   font-size: 28px;
   font-weight: 700;
@@ -190,6 +190,10 @@
   color: #8e44ad;
 }
 .skin-purple .tags-list li a:after {
+  background-color: #8e44ad;
+}
+/* Announcement list style (based on tag list), by 0-Maverick, 2018-Dec-30 */
+.skin-purple .ann-list li a:after {
   background-color: #8e44ad;
 }
 .skin-purple aside .aside-title {
@@ -497,7 +501,7 @@
 }
 .skin-blue .featured .details h1 {
   margin-bottom: 5px;
-  text-transform: capitalize;
+  text-transform: none;
   line-height: 1.4em;
   font-size: 28px;
   font-weight: 700;
@@ -538,6 +542,10 @@
   color: #626EEF;
 }
 .skin-blue .tags-list li a:after {
+  background-color: #626EEF;
+}
+/* Announcement list style (based on tag list), by 0-Maverick, 2018-Dec-30 */
+.skin-blue .ann-list li a:after {
   background-color: #626EEF;
 }
 .skin-blue aside .aside-title {
@@ -845,7 +853,7 @@
 }
 .skin-orange .featured .details h1 {
   margin-bottom: 5px;
-  text-transform: capitalize;
+  text-transform: none;
   line-height: 1.4em;
   font-size: 28px;
   font-weight: 700;
@@ -886,6 +894,10 @@
   color: #FC624D;
 }
 .skin-orange .tags-list li a:after {
+  background-color: #FC624D;
+}
+/* Announcement list style (based on tag list), by 0-Maverick, 2018-Dec-30 */
+.skin-orange .ann-list li a:after {
   background-color: #FC624D;
 }
 .skin-orange aside .aside-title {

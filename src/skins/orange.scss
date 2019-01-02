@@ -243,7 +243,7 @@ $colors: (
       }
       h1 {
         margin-bottom: 5px;
-        text-transform: capitalize;
+        text-transform: none;
         line-height: 1.4em;
         font-size: 28px;
         font-weight: 700;
@@ -332,6 +332,17 @@ $colors: (
   }
 
   .tags-list {
+    li {
+      a {
+        &:after {
+          background-color: color($colors, primary);
+        }
+      }
+    }
+  }
+
+/* Announcement list style (based on tag list), by 0-Maverick, 2018-Dec-30 */
+  .ann-list {
     li {
       a {
         &:after {
